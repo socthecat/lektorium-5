@@ -11,6 +11,17 @@ $mdc-theme-on-secondary: #2b4442;
 @import "@material/checkbox/mdc-checkbox";
 @import "custom";
 
+@media only screen and (max-width: 900px) {
+    .form-thingy, .mdc-list-item {
+        width: 50vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .form-thingy, .mdc-list-item {
+        width: 80vw;
+    }
+}
+
 html, body {
     padding: 0;
     margin: 0;

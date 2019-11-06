@@ -5,7 +5,7 @@ console.log('Amount of selected todos: ' + count)
 newElement = () => {
   const inputValue = document.getElementById('my-text-field').value
   if (inputValue === '') {
-    alert("Don't sumbit an empty task!")
+    alert("Don't submit an empty task!")
   } else {
     const li = document.createElement('li')
     li.className = 'mdc-list-item'
