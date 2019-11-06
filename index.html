@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HomeWork 5 — lektorium</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="todo.js" defer></script>
+    <script src="debounce.js" defer></script>
+</head>
+
+<body>
+    <h1>To Do List</h1>
+    <div class="form-thingy">
+        <div class="mdc-text-field">
+            <input type="text" id="my-text-field" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="my-text-field">Add item</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <button class="mdc-button mdc-button--outlined" onclick="newElement()">
+            <span class="mdc-button__label">Button</span>
+        </button>
+    </div>
+
+    <ul class="mdc-list" role="group" aria-label="List with checkbox items" id="todolist">
+        <li class="mdc-list-item" role="checkbox">
+            <span class="mdc-list-item__graphic">
+                <div class="mdc-checkbox">
+                    <input type="checkbox" class="mdc-checkbox__native-control" />
+                    <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path" fill="none"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                </div>
+            </span>
+            <label class="mdc-list-item__text">Feed the Tamagotchi</label>
+            <span class="close-button" onclick="this.parentNode.remove()"><i class="material-icons">close</i></span>
+        </li>
+        <li class="mdc-list-item" role="checkbox">
+            <span class="mdc-list-item__graphic">
+                <div class="mdc-checkbox">
+                    <input type="checkbox" class="mdc-checkbox__native-control" />
+                    <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path" fill="none"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                </div>
+            </span>
+            <label class="mdc-list-item__text">Make a debounce thingy</label>
+            <span class="close-button" onclick="return this.parentNode.remove()"><i class="material-icons">close</i></span>
+        </li>
+        <li class="mdc-list-item" role="checkbox">
+            <span class="mdc-list-item__graphic">
+                <div class="mdc-checkbox">
+                    <input type="checkbox" class="mdc-checkbox__native-control" />
+                    <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path" fill="none"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                </div>
+            </span>
+            <label class="mdc-list-item__text">Sleep</label>
+            <span class="close-button" onclick="return this.parentNode.remove()"><i class="material-icons">close</i></span>
+        </li>
+    </ul>
+
+    <h1>Asynchronous - debounce - search </h1>
+
+    <div class="form-thingy">
+        <div class="mdc-text-field" id="deb-text-field">
+            <input type="text" id="debounce-field" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="debounce-field">Type</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+    </div>
+    <div id="deb-res"></div>
+
+    <script src="dist/script.js" async></script>
+</body>
+
+</html>

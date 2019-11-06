@@ -1,0 +1,35 @@
+h1 {
+    @include mdc-typography(headline2); 
+    text-align: center;
+    color: $mdc-theme-on-primary;
+}
+#deb-res {
+    @include mdc-typography(overline);
+    text-align: center;
+}
+.form-thingy {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 23vw;
+}
+.mdc-list-item {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    margin: 0 auto;
+    align-items: center;
+}
+.close-button {
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    @include mdc-ripple-surface;
+    @include mdc-ripple-radius-bounded;
+    @include mdc-states-base-color(rgb(131, 0, 0));
+    @include mdc-states-hover-opacity(.1);
+    @include mdc-states-focus-opacity(.3);
+    @include mdc-states-press-opacity(.4);
+}
